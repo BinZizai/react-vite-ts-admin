@@ -1,3 +1,7 @@
+/**
+ * eventBus 的发布订阅模式
+ */
+
 type List = Array<(any) => void>;
 
 class Bus {

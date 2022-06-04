@@ -18,9 +18,14 @@ export default function SiderMenu() {
 
   const Logo = useMemo(() => {
     if (collapsed) {
-      return <IconFont type='icon-logo1' style={{ fontSize: 32 }} />;
+      return <img width={24} alt='logo' src='/src/assets/img/logo-1.png' />;
     }
-    return <IconFont type='icon-logo' style={{ fontSize: 80 }} />;
+    return (
+      <>
+        <img width={24} alt='logo' src='/src/assets/img/logo-1.png' />
+        &nbsp; &nbsp; Ant Design
+      </>
+    );
   }, [collapsed]);
 
   const onMenuClick = useCallback(
@@ -35,7 +40,11 @@ export default function SiderMenu() {
       return menus.map((item) => {
         if (item.children?.length) {
           return (
-            <Menu.SubMenu key={item.path} title={item.label} icon={icon && <i className={`iconfont ${item.icon} ant-menu-item-icon`}></i>}>
+            <Menu.SubMenu
+              key={item.path}
+              title={item.label}
+              icon={icon && <i className={`iconfont ${item.icon} ant-menu-item-icon`}></i>}
+            >
               {renderMenu(item.children, false)}
             </Menu.SubMenu>
           );

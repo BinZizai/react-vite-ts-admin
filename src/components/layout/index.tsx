@@ -79,7 +79,7 @@ export default function ILayout() {
           <React.Suspense fallback={<LoadingPage />}>
             <Outlet></Outlet>
           </React.Suspense>
-          <p style={{ marginTop: 20 }}>
+          <p style={{ marginTop: 12 }}>
             <CopyRight />
           </p>
         </Content>

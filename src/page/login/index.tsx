@@ -15,10 +15,11 @@ export default function LoginPage() {
   const { login } = useLogin();
   const system = useRecoilValue(globalAtom.systemConfig);
   const themeConfig = useRecoilValue(globalSelector.themeConfig);
-  const form = useRef<{ username: string; password: string }>({
-    username: 'admin',
+  const initialValues = {
+    username: '孙悟空',
     password: '123456'
-  });
+  };
+  const form = useRef<{ username: string; password: string }>(initialValues);
   const validModal = useRef<any>();
 
   const onFinish = (val: any) => {
@@ -45,7 +46,14 @@ export default function LoginPage() {
           <div className={styles.form}>
             <div className={styles.login_tip}>{system.name}</div>
 
-            <Form name='basic' size='large' wrapperCol={{ span: 24 }} onFinish={onFinish} autoComplete='off'>
+            <Form
+              name='basic'
+              size='large'
+              wrapperCol={{ span: 24 }}
+              initialValues={initialValues}
+              onFinish={onFinish}
+              autoComplete='off'
+            >
               <Form.Item name='username' rules={[{ required: true, message: '请输入用户名' }]}>
                 <Input
                   autoComplete={''}

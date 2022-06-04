@@ -1,3 +1,3 @@
 export default function UserPage() {
-  return <div className='i-page demo'>UserPage</div>;
+  return <div className='i-page demo'>{location.pathname}</div>;
 }

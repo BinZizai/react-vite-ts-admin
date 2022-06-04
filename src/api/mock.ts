@@ -6,7 +6,7 @@ export const user = {
     createTime: '',
     userId: 1,
     tenantId: 1,
-    username: '斌',
+    username: '孙悟空',
     phone: '',
     password: '123456'
   }
@@ -45,7 +45,7 @@ export const menus = [
     id: 10157,
     parentId: -1,
     weight: 0,
-    name: 'home',
+    name: 'Home',
     clientId: 'base_message',
     keepAlive: '0',
     moduleType: '1',
