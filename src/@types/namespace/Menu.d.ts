@@ -1,4 +1,4 @@
-declare namespace MKH {
+declare namespace NSP {
   export interface Menu {
     id: number;
     label: string;

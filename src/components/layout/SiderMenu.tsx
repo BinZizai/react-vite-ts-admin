@@ -29,14 +29,14 @@ export default function SiderMenu() {
   }, [collapsed]);
 
   const onMenuClick = useCallback(
-    (menu: MKH.Menu) => {
+    (menu: NSP.Menu) => {
       navigate(menu.path);
     },
     [navMenus]
   );
 
   const renderMenu = useCallback(
-    (menus: MKH.Menu[], icon?: boolean) => {
+    (menus: NSP.Menu[], icon?: boolean) => {
       return menus.map((item) => {
         if (item.children?.length) {
           return (

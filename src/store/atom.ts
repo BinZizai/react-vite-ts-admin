@@ -13,19 +13,19 @@ export const globalAtom = {
     key: 'token',
     default: tokenFn.get() || ''
   }),
-  user: atom<MKH.User | Record<string, any>>({
+  user: atom<NSP.User | Record<string, any>>({
     key: 'user',
     default: {}
   }),
-  menus: atom<MKH.Menu[]>({
+  menus: atom<NSP.Menu[]>({
     key: 'menus',
     default: []
   }),
-  navMenus: atom<MKH.Menu[]>({
+  navMenus: atom<NSP.Menu[]>({
     key: 'navMenus',
     default: [{ label: '首页', name: '首页', sort: 0, spread: true, type: '0', id: 0, parentId: -1, path: '/' }]
   }),
-  systemConfig: atom<MKH.SystemConfig>({
+  systemConfig: atom<NSP.SystemConfig>({
     key: 'systemConfig',
     default: { ...system, ...JSON.parse(Cookies.get('systemConfig') || '{}') }
   }),

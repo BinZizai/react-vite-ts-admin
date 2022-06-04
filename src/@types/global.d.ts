@@ -1,4 +1,4 @@
-declare namespace MKH {
+declare namespace NSP {
   export interface Response<T> {
     code: number;
     data: T;

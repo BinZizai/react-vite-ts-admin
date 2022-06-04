@@ -10,11 +10,11 @@ export default function useMenu() {
     const patharr = path.split('/');
     const arr: string[] = patharr.map((item, index) => patharr.slice(0, index + 1).join('/')).slice(1);
 
-    const findMenu = (list: MKH.Menu[], path: string) => {
+    const findMenu = (list: NSP.Menu[], path: string) => {
       return list.filter((item) => item.path === path)[0];
     };
     let currentList = [...menus];
-    const current: MKH.Menu[] = [];
+    const current: NSP.Menu[] = [];
     arr.forEach((item) => {
       const cm = findMenu(currentList, item);
       if (cm) {
@@ -36,7 +36,7 @@ export default function useMenu() {
     }
   };
   // 添加胶囊导航
-  const addNavMenus = (menu: MKH.Menu) => {
+  const addNavMenus = (menu: NSP.Menu) => {
     if (!navMenus.filter((item) => item.path === menu.path).length) {
       setNavMenus([...navMenus, menu]);
     }

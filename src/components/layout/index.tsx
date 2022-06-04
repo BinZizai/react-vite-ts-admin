@@ -30,7 +30,7 @@ export default function ILayout() {
 
   // 设置网页标题
   useEffect(() => {
-    const menu = getMenuByPath(location.pathname) as MKH.Menu;
+    const menu = getMenuByPath(location.pathname) as NSP.Menu;
     document.title = menu?.name || system.name;
   }, [menus, location.pathname]);
 

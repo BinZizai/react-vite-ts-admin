@@ -15,9 +15,9 @@ export const globalSelector = {
     key: 'menuMap',
     get: ({ get }) => {
       const menus = get(globalAtom.menus);
-      const maps: Record<string, MKH.Menu> = {};
+      const maps: Record<string, NSP.Menu> = {};
 
-      const getMaps = (menus: MKH.Menu[]) => {
+      const getMaps = (menus: NSP.Menu[]) => {
         menus.forEach((item) => {
           maps[item.path] = item;
           if (Array.isArray(item.children) && item.children.length) {
@@ -34,8 +34,8 @@ export const globalSelector = {
     key: 'flatMenus',
     get: ({ get }) => {
       const menus = get(globalAtom.menus);
-      const flats: MKH.Menu[] = [];
-      const getMenus = (menus: MKH.Menu[]) => {
+      const flats: NSP.Menu[] = [];
+      const getMenus = (menus: NSP.Menu[]) => {
         menus.forEach((item) => {
           const { children, ...rest } = item;
           flats.push({ ...rest });
