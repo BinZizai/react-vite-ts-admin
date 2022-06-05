@@ -34,7 +34,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className={styles.container} style={{ background: `url(${themeConfig.loginBackground}) top center no-repeat` }}>
+    <div
+      className={styles.container}
+      style={{ background: `url(${themeConfig.loginBackground}) top center no-repeat`, backgroundSize: '100% 100%' }}
+    >
       <div className={styles.login_wrapper}>
         <div className={styles.login_left}>
           <img src={'/src/assets/img/home.jpg'} width='100%' height='100%'></img>

@@ -3,16 +3,21 @@
  */
 
 type List = Array<(any) => void>;
-
-class Bus {
+interface IBus {
   list: Record<string, List>;
+  on: (name: string, callback: (any) => void) => void;
+  emit: (name: string, args: Array<any>) => void;
+}
+
+class Bus implements IBus {
+  list = {};
   constructor() {
     this.list = {};
   }
-  on(name: string, callback: (any) => void) {
+  on(name, callback) {
     this.list[name] = (this.list[name] || []).concat(callback);
   }
-  emit(name: string, ...args: Array<any>) {
+  emit(name, ...args) {
     const callbacks = this.list[name] || [];
     callbacks.forEach((fn) => {
       fn.apply(this, args);

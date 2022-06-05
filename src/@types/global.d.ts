@@ -20,7 +20,7 @@ declare namespace NSP {
     name: string;
     version: string;
     env: string;
-    theme: 'customer' | 'ecology' | 'tech';
+    theme: 'blue' | 'green';
     navbar: 'navbar' | 'pagename';
   }
 }
