@@ -5,7 +5,6 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import LoadingPage from '@/components/loading';
-import CopyRight from '@/components/copyright';
 import SiderMenu from './SiderMenu';
 import IHeader from './Header';
 import IBreadcrumb from './IBreadcrumb';
@@ -79,9 +78,6 @@ export default function ILayout() {
           <React.Suspense fallback={<LoadingPage />}>
             <Outlet></Outlet>
           </React.Suspense>
-          <p style={{ marginTop: 12 }}>
-            <CopyRight />
-          </p>
         </Content>
       </Layout>
     </Layout>
