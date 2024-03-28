@@ -1,7 +1,20 @@
 {
-  "name": "react-message",
+  "name": "react-vite-ts-admin",
   "private": true,
   "version": "0.0.0",
+  "keywords": [
+    "typescript",
+    "vite",
+    "react18",
+    "recoil",
+    "react hooks",
+    "react后台管理模版",
+    "react+vite项目模版",
+    "前端水印",
+    "约定式路由",
+    "动态路由",
+    "后端返回导航菜单"
+  ],
   "scripts": {
     "dev": "vite serve --mode development",
     "build": "tsc && vite build",
